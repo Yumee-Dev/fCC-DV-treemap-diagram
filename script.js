@@ -41,8 +41,8 @@ fetch(
                 const tooltip = d3.select("#tooltip");
                 tooltip
                     .style("display", "block")
-                    .style("left", event.clientX + 8 + "px")
-                    .style("top", event.clientY + "px")
+                    .style("left", event.pageX + 8 + "px")
+                    .style("top", event.pageY + "px")
                     .html(`${d.data.name}<br>${d.data.category}<br>${d.data.value}`)
                     .attr("data-value", d.data.value);
             })
